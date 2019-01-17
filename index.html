@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="w1200 index">
+    <div class="w1200 index flexbox">
         <!-- 左边个人信息 -->
         <div class="personal_info outer ">
             <div class="top"></div>
@@ -34,12 +34,40 @@
                 <a href="https://weibo.com/u/5832155572" target="_blank"><img src="images/sina.png" alt="sina"></a>
             </p>
         </div>
-        
-        <!-- QQ微信二维码弹窗 -->
-        <div class="qq_qr_code"><img src="images/qq_qr_code.jpg" alt=""></div>
-        <div class="wechat_qr_code"><img src="images/wechat_qr_code.jpg" alt=""></div>
+        <div class="personal_info_seize"></div>
+        <!-- 右边个人简介 -->
+        <div class="personal_profile">
+            <!-- 右边导航 -->
+            <div class="menu outer">
+                <ul class="flexbox">
+                    <li class="selection">基本信息</li>
+                    <li>教育背景</li>
+                    <li>个人技能</li>
+                    <li>工作经历</li>
+                    <li>个人作品</li>
+                </ul>
+            </div>
+            <div class="detailed_info outer">
+                <div class="essential_info">基本信息待添加
+                </div>
+                <div class="edu_bg">教育背景待添加
+                </div>
+                <div class="personal_skills">个人技能待添加
+                </div>
+                <div class="work_experience">工作经历待添加
+                </div>
+                <div class="personal_works">个人作品待添加
+                </div>
+            </div>
+        </div>
+
+
     </div>
+    <!-- QQ微信二维码弹窗 -->
+    <div class="qq_qr_code"><img src="images/qq_qr_code.jpg" alt=""></div>
+    <div class="wechat_qr_code"><img src="images/wechat_qr_code.jpg" alt=""></div>
     <script>
+        // QQ微信二维码弹窗
         $("#qq_icon").on("click", function () {
             layer.open({
                 type: 1,
@@ -65,6 +93,17 @@
                     $(".wechat_qr_code").hide();
                 },
             });
+        });
+
+        // 基本信息-教育背景-个人技能-工作经历-个人作品 选项卡切换
+        var li =$(".personal_profile .menu ul li");
+        li.on("click",function(){
+            var index=$(this).index();
+            $(this).siblings("li").removeClass("selection");
+            $(this).addClass("selection");
+            $(".detailed_info").children().hide();
+            $(".detailed_info").children().eq(index).show();
+
         });
     </script>
 </body>

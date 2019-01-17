@@ -1,15 +1,34 @@
-.index{margin: 0 auto;}
-.personal_info{height: 100%;width: 300px;position: fixed;top:0;left: 50%;margin-left:-600px;}
+.index{margin: 0 auto;bottom:0;top: 0;position: fixed;left: 0;right: 0;}
+.personal_info_seize{width: 340px;}
+.personal_info{width: 300px;position: fixed;top:0;bottom: 0;left: 50%;margin-left:-580px;margin-top: 20px;margin-bottom: 20px;}
 .personal_info .top{height: 180px;background-color: #4d4d4d;width: 100%;}
 .personal_info .head_portrait{width: 128px;height: 128px;border-radius: 50%;border:5px solid #fff;background:url(../images/head_portrait.jpg);background-size: 100%; margin: 0 auto;margin-top:-64px;}
 .personal_info .main_info{text-align: center;}
 .personal_info .main_info p.name{font-size: 24px;font-weight: bolder;}
 .personal_info .main_info p.occupation{font-size: 18px;font-weight: bolder;}
 .personal_info .main_info p.motto{font-size: 14px;}
-
+.personal_info ul li{margin-top:10px;}
 .personal_info ul li img{width: 48px;height: 48px;display: inline-block;vertical-align: middle;text-align: left;}
 .personal_info ul li span{display: inline-block;vertical-align: middle;width: 170px;text-align: center;}
 .personal_info .chat_icon{text-align: center;}
 .personal_info .chat_icon img {margin: 0px;width: 32px;height: 32px;margin: 10px;cursor: pointer;}
 .qq_qr_code,.wechat_qr_code{position: fixed;top: 50%;left: 50%;margin-left:-128px;margin-top:-128px;display: none;}
 .qq_qr_code img,.wechat_qr_code img{width: 256px;height: 256px;}
+
+.personal_profile{flex: 1;margin:20px 20px 20px 0;flex-direction: column;display: flex;}
+.personal_profile .menu{margin-bottom: 20px;padding:0px;height: 40px;}
+.personal_profile .menu ul li{display: inline-block;text-align: center;flex: 1;height: 40px;line-height: 40px;cursor: pointer;}
+.personal_profile .menu ul li.selection{border-top:2px solid #666;}
+.personal_profile .detailed_info{flex: 1;text-align: center}
+.personal_profile .detailed_info .essential_info{flex: 1;overflow-y: auto;}
+.personal_profile .detailed_info .edu_bg{flex: 1;overflow-y: auto;display: none}
+.personal_profile .detailed_info .personal_skills{flex: 1;overflow-y: auto;display: none;}
+.personal_profile .detailed_info .work_experience{flex: 1;overflow-y: auto;display: none;}
+.personal_profile .detailed_info .personal_works{flex: 1;overflow-y: auto;display: none;}
+
+
+/* 响应式布局 */
+@media screen and ( max-width: 1200px ){
+    .index{width: 100%;}
+    .personal_info{left:20px;margin-left: 0px;}
+}
