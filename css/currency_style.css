@@ -1,0 +1,19 @@
+body,html,div,header,footer,nav,li,h1,h2,h3,h4,h5,h6 {padding: 0;margin: 0;box-sizing: border-box;}
+h1,h2,h3,h4,h5,h6 {font-weight: 400;}
+html {height: 100%;}
+a {text-decoration: none;}
+body {font:17px "微软雅黑";color: #333;background-image: url(../images/body_bg.jpg);position: relative;min-height: 100%;}
+button {border: none;outline: none;}
+ul,ol{list-style:none;}
+img{border:0 none;}
+h1{font-size: 32px;}
+h2{font-size: 27px;}
+h3{font-size: 23px;}
+h4{font-size: 20px;}
+h5{font-size: 17px;}
+h6{font-size: 15px;}
+.outer{padding:10px;box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.3), 0 0 30px rgba(10, 10, 0, 0.1) inset;background:#f8f8f8;}
+.w1200{width: 1200px;}
+.mt10{margin-top:10px;}
+.mt20{margin-top:20px;}
+.mt30{margin-top:30px;}

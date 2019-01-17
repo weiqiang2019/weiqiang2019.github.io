@@ -1,0 +1,15 @@
+.index{margin: 0 auto;}
+.personal_info{height: 100%;width: 300px;position: fixed;top:0;left: 50%;margin-left:-600px;}
+.personal_info .top{height: 180px;background-color: #4d4d4d;width: 100%;}
+.personal_info .head_portrait{width: 128px;height: 128px;border-radius: 50%;border:5px solid #fff;background:url(../images/head_portrait.jpg);background-size: 100%; margin: 0 auto;margin-top:-64px;}
+.personal_info .main_info{text-align: center;}
+.personal_info .main_info p.name{font-size: 24px;font-weight: bolder;}
+.personal_info .main_info p.occupation{font-size: 18px;font-weight: bolder;}
+.personal_info .main_info p.motto{font-size: 14px;}
+
+.personal_info ul li img{width: 48px;height: 48px;display: inline-block;vertical-align: middle;text-align: left;}
+.personal_info ul li span{display: inline-block;vertical-align: middle;width: 170px;text-align: center;}
+.personal_info .chat_icon{text-align: center;}
+.personal_info .chat_icon img {margin: 0px;width: 32px;height: 32px;margin: 10px;cursor: pointer;}
+.qq_qr_code,.wechat_qr_code{position: fixed;top: 50%;left: 50%;margin-left:-128px;margin-top:-128px;display: none;}
+.qq_qr_code img,.wechat_qr_code img{width: 256px;height: 256px;}
