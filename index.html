@@ -104,7 +104,18 @@
             $(this).addClass("selection");
             $(".detailed_info").children().hide();
             $(".detailed_info").children().eq(index).show();
-
+        });
+        //移动端下滑一定距离后，让选项卡显示在顶端
+        var ulSlide = $(".personal_profile .menu").offset().top;
+        $(".index").scroll(function () {
+            var slide = $(".index").scrollTop();
+            if (slide >= ulSlide - 5) {
+                $(".personal_profile .menu").addClass("menu_fixed");
+                $(".detailed_info").addClass("detailed_info_fixed");
+            } else {
+                $(".personal_profile .menu").removeClass("menu_fixed");
+                $(".detailed_info").removeClass("detailed_info_fixed");
+            }
         });
     </script>
 </body>
