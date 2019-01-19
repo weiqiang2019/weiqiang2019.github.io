@@ -1,6 +1,6 @@
-.index{margin: 0 auto;bottom:0;top: 0;position: fixed;left: 0;right: 0;}
-.personal_info_seize{width: 340px;}
-.personal_info{width: 300px;position: fixed;top:0;bottom: 0;left: 50%;margin-left:-580px;margin-top: 20px;margin-bottom: 20px;}
+.index{margin: 0 auto;bottom:0;top: 0;left: 0;right: 0;overflow-y: auto;position: fixed;}
+.personal_info_seize{width: 300px;position: relative;margin:20px;}
+.personal_info{width: 300px;position: absolute;top:0;bottom: 0;min-height: 700px;}
 .personal_info .top{height: 180px;background-color: #4d4d4d;width: 100%;}
 .personal_info .head_portrait{width: 128px;height: 128px;border-radius: 50%;border:5px solid #fff;background:url(../images/head_portrait.jpg);background-size: 100%; margin: 0 auto;margin-top:-64px;}
 .personal_info .main_info{text-align: center;}
@@ -15,20 +15,83 @@
 .qq_qr_code,.wechat_qr_code{position: fixed;top: 50%;left: 50%;margin-left:-128px;margin-top:-128px;display: none;}
 .qq_qr_code img,.wechat_qr_code img{width: 256px;height: 256px;}
 
-.personal_profile{flex: 1;margin:20px 20px 20px 0;flex-direction: column;display: flex;}
+.personal_profile{flex: 1;margin:20px 20px 20px 0;flex-direction: column;display: flex;min-height: 700px;}
 .personal_profile .menu{margin-bottom: 20px;padding:0px;height: 40px;}
 .personal_profile .menu ul li{display: inline-block;text-align: center;flex: 1;height: 40px;line-height: 40px;cursor: pointer;}
 .personal_profile .menu ul li.selection{border-top:2px solid #666;}
-.personal_profile .detailed_info{flex: 1;text-align: center}
-.personal_profile .detailed_info .essential_info{flex: 1;overflow-y: auto;}
-.personal_profile .detailed_info .edu_bg{flex: 1;overflow-y: auto;display: none}
+.personal_profile .detailed_info{flex: 1;text-align: center;min-height: 640px;}
+.personal_profile .detailed_info .edu_bg{flex: 1;overflow-y: auto;display: block;}
 .personal_profile .detailed_info .personal_skills{flex: 1;overflow-y: auto;display: none;}
 .personal_profile .detailed_info .work_experience{flex: 1;overflow-y: auto;display: none;}
 .personal_profile .detailed_info .personal_works{flex: 1;overflow-y: auto;display: none;}
 
 
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+  }
+  ::-webkit-scrollbar-button:start:increment,
+  ::-webkit-scrollbar-button:end:decrement {
+    display: none;
+  }
+  ::-webkit-scrollbar-corner {
+    display: block;
+  }
+  ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    background-color: rgba(0,0,0,0.2);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    background-color: rgba(0,0,0,0.5);
+  }
+  ::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-thumb {
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+  }
+  ::-webkit-scrollbar-track:hover {
+    background-color: rgba(0,0,0,0.15);
+  }
+  ::-webkit-scrollbar-button:start {
+    width: 10px;
+    height: 10px;
+    background: url("../img/scrollbar_arrow.png") no-repeat 0 0;
+  }
+  ::-webkit-scrollbar-button:start:hover {
+    background: url("../img/scrollbar_arrow.png") no-repeat -15px 0;
+  }
+  ::-webkit-scrollbar-button:start:active {
+    background: url("../img/scrollbar_arrow.png") no-repeat -30px 0;
+  }
+  ::-webkit-scrollbar-button:end {
+    width: 10px;
+    height: 10px;
+    background: url("../img/scrollbar_arrow.png") no-repeat 0 -18px;
+  }
+  ::-webkit-scrollbar-button:end:hover {
+    background: url("../img/scrollbar_arrow.png") no-repeat -15px -18px;
+  }
+  ::-webkit-scrollbar-button:end:active {
+    background: url("../img/scrollbar_arrow.png") no-repeat -30px -18px;
+  }
 /* 响应式布局 */
 @media screen and ( max-width: 1200px ){
     .index{width: 100%;}
-    .personal_info{left:20px;margin-left: 0px;}
+    .personal_info{margin-left: 0px;}
+}
+@media screen and ( max-width: 1080px ){
+    .index{width: 100%;display: block;}
+    .personal_info_seize{width: auto;position: unset;}
+    .personal_info{left: 20px;right: 20px;display: block;width: auto;height: 700px;width: 100%;position: unset;}
+    .personal_profile{margin-left: 20px;}
+}
+@media screen and ( max-height: 740px ){
+    
 }
