@@ -86,12 +86,9 @@
     .index{width: 100%;}
     .personal_info{margin-left: 0px;}
 }
-@media screen and ( max-width: 1080px ){
+@media screen and ( max-width: 780px ){
     .index{width: 100%;display: block;}
     .personal_info_seize{width: auto;position: unset;}
     .personal_info{left: 20px;right: 20px;display: block;width: auto;height: 700px;width: 100%;position: unset;}
     .personal_profile{margin-left: 20px;}
-}
-@media screen and ( max-height: 740px ){
-    
 }
