@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 
 <head>
-    <title>个人主页</title>
     <meta charset="utf-8">
+    <title>个人主页</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
     <link rel="shortcut icon" href="https://www.17qcc.com/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="layui/css/layui.css" />
     <link rel="stylesheet" href="css/currency_style.css" />
@@ -12,31 +13,31 @@
 </head>
 
 <body>
-    <div class="w1200 index flexbox">
+    <div class="index flexbox">
         <!-- 左边个人信息 -->
 
         <div class="personal_info_seize">
-                    <div class="personal_info outer ">
-            <div class="top"></div>
-            <div class="head_portrait"></div>
-            <div class="main_info">
-                <p class="name mt30">高位强</p>
-                <p class="occupation mt10">前端工程师</p>
-                <p class="motto mt30">星光不问赶路人，时光不负有心人</p>
-                <ul class="mt30">
-                    <li><img src="images/place.png" alt="地点" /><span>福建&nbsp;泉州</span></li>
-                    <li><img src="images/phone.png" alt="电话"><span>156****8059</span></li>
-                    <li><img src="images/mailbox.png" alt="邮箱"><span>985313519@qq.com</span></li>
-                </ul>
-            </div>
+            <div class="personal_info outer ">
+                <div class="top"></div>
+                <div class="head_portrait"></div>
+                <div class="main_info">
+                    <p class="name mt30">高位强</p>
+                    <p class="occupation mt10">前端工程师</p>
+                    <p class="motto mt30">星光不问赶路人，时光不负有心人</p>
+                    <ul class="mt30">
+                        <li><img src="images/place.png" alt="地点" /><span>福建&nbsp;泉州</span></li>
+                        <li><img src="images/phone.png" alt="电话"><span>156****8059</span></li>
+                        <li><img src="images/mailbox.png" alt="邮箱"><span>985313519@qq.com</span></li>
+                    </ul>
+                </div>
 
-            <p class="chat_icon mt30">
-                <a href="https://github.com/weiqiang2019" target="_blank"><img src="images/github.png" alt="github"></a>
-                <a href="javascript:;" id="qq_icon"><img src="images/qq.png" alt="qq" /></a>
-                <a href="javascript:;" id="wechat_icon"><img src="images/wechat.png" alt="wechat" /></a>
-                <a href="https://weibo.com/u/5832155572" target="_blank"><img src="images/sina.png" alt="sina"></a>
-            </p>
-        </div>
+                <p class="chat_icon mt30">
+                    <a href="https://github.com/weiqiang2019" target="_blank"><img src="images/github.png" alt="github"></a>
+                    <a href="javascript:;" id="qq_icon"><img src="images/qq.png" alt="qq" /></a>
+                    <a href="javascript:;" id="wechat_icon"><img src="images/wechat.png" alt="wechat" /></a>
+                    <a href="https://weibo.com/u/5832155572" target="_blank"><img src="images/sina.png" alt="sina"></a>
+                </p>
+            </div>
         </div>
         <!-- 右边个人简介 -->
         <div class="personal_profile">
@@ -96,9 +97,9 @@
         });
 
         // 基本信息-教育背景-个人技能-工作经历-个人作品 选项卡切换
-        var li =$(".personal_profile .menu ul li");
-        li.on("click",function(){
-            var index=$(this).index();
+        var li = $(".personal_profile .menu ul li");
+        li.on("click", function () {
+            var index = $(this).index();
             $(this).siblings("li").removeClass("selection");
             $(this).addClass("selection");
             $(".detailed_info").children().hide();
