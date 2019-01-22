@@ -16,10 +16,10 @@
 .qq_qr_code img,.wechat_qr_code img{width: 256px;height: 256px;}
 
 .personal_profile{flex: 1;margin:20px 20px 20px 0;flex-direction: column;display: flex;min-height: 700px;}
-.personal_profile .menu{margin-bottom: 20px;padding:0px;height: 40px;}
+.personal_profile .menu{padding:0px;height: 40px;margin-bottom: 20px;}
 .personal_profile .menu ul li{display: inline-block;text-align: center;flex: 1;height: 40px;line-height: 40px;cursor: pointer;}
 .personal_profile .menu ul li.selection{border-top:2px solid #666;}
-.personal_profile .detailed_info{flex: 1;text-align: center;}
+.personal_profile .detailed_info{flex: 1;text-align: center;display: flex;flex-direction: column;}
 .personal_profile .detailed_info .edu_bg{flex: 1;overflow-y: auto;display: block;min-height: 600px;}
 .personal_profile .detailed_info .personal_skills{flex: 1;overflow-y: auto;display: none;min-height: 600px;}
 .personal_profile .detailed_info .work_experience{flex: 1;overflow-y: auto;display: none;min-height: 600px;}
@@ -44,17 +44,20 @@
 ::-webkit-scrollbar-button:end:active {background: url("../images/scrollbar_arrow.png") no-repeat -30px -18px;} */
 /* 响应式布局 */
 @media screen and ( max-width: 800px ){
-    .index{width: 100%;display: block;}
+    .index{width: 100%;display: block;position: unset;}
     .personal_info_seize{width: auto;position: unset;margin: 5px 5px;}
     .personal_info{display: block;width: auto;min-height: 600px;width: 100%;position: unset;}
     .personal_profile{margin:20px 5px 5px 5px;}
-    .personal_profile .menu{margin-bottom:5px;}
-    .personal_profile .menu_fixed{position: fixed;left: 5px;right: 5px;top:5px;}
+    .personal_profile .menu{margin-bottom:10px;font-size: 14px;}
+    .personal_profile .menu_fixed{position: fixed;left: 5px;right: 5px;top:0px;}
     .personal_info ul li{margin-top:0px;}
     .personal_info .main_info p.name,
     .personal_info .main_info p.motto,
     .personal_info .main_info ul,
     .personal_info .chat_icon{margin-top: 15px;}
     .personal_info .top{height:150px}
-    .detailed_info_fixed{position: fixed;left: 5px;right: 5px;top:50px;bottom: 5px;overflow-y: auto;}
+    .personal_profile .detailed_info .edu_bg{margin-top:10px;display: block;} 
+    .personal_profile .detailed_info .personal_skills{margin-top:10px;display: block;} 
+    .personal_profile .detailed_info .work_experience{margin-top:10px;display: block;} 
+    .personal_profile .detailed_info .personal_works{margin-top:10px;display: block;} 
 }
