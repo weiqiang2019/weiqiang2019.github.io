@@ -18,3 +18,5 @@ h6{font-size: 15px;}
 .mt20{margin-top:20px;}
 .mt30{margin-top:30px;}
 .flexbox{display: flex;}
+.show{display: block;}
+.hide{display: none;}
