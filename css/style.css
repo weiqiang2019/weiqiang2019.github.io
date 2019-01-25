@@ -20,10 +20,17 @@
 .personal_profile .menu ul li{display: inline-block;text-align: center;flex: 1;height: 40px;line-height: 40px;cursor: pointer;}
 .personal_profile .menu ul li.selection{border-top:2px solid #666;}
 .personal_profile .detailed_info{flex: 1;text-align: center;display: flex;flex-direction: column;}
-.personal_profile .detailed_info .edu_bg{flex: 1;overflow-y: auto;display: block;min-height: 600px;}
+.personal_profile .detailed_info .edu_bg{flex: 1;overflow-y: auto;display: block;min-height: 600px;text-align: left;padding-bottom: 20px;}
 .personal_profile .detailed_info .personal_skills{flex: 1;overflow-y: auto;display: none;min-height: 600px;}
 .personal_profile .detailed_info .work_experience{flex: 1;overflow-y: auto;display: none;min-height: 600px;}
 .personal_profile .detailed_info .personal_works{flex: 1;overflow-y: auto;display: none;min-height: 600px;}
+
+.detailed_info .edu_bg .school_img{background: url(../images/school_img.png) no-repeat;width: 60%;height: 0px;padding-top:14.751%;background-size: 100%;margin: 40px auto;max-width: 480px;}
+.detailed_info .edu_bg .title{width: 80%;margin: 0  auto;line-height: 50px;font-size: 20px;height: 50px;display: flex;align-items:center;font-weight: bolder;}
+.detailed_info .edu_bg .title i.title_edu {height: 40px;width: 40px;background: url(../images/edu_bg.png) rgba(0, 0,0, 0.1);background-size: 100%;border-radius: 25px;margin-right: 20px;}
+.detailed_info .edu_bg .title span{flex: 1;border-bottom: 1px solid #666;}
+.detailed_info .edu_bg .info {width: 80%; margin: 20px auto;padding-left: 70px;line-height: 30px;font-size: 16px;}
+.detailed_info .edu_bg .title i.title_honor {height: 40px;width: 40px;background: url(../images/honor.png) rgba(0, 0,0, 0.1);background-size: 100%;border-radius: 25px;margin-right: 20px;}
 
 /* 无滚动条 */
 ::-webkit-scrollbar {width: 0px;height: 0px;}
@@ -60,4 +67,10 @@
     .personal_profile .detailed_info .personal_skills{margin-top:10px;display: block;} 
     .personal_profile .detailed_info .work_experience{margin-top:10px;display: block;} 
     .personal_profile .detailed_info .personal_works{margin-top:10px;display: block;} 
+
+    .detailed_info .edu_bg .school_img{width: 80%;margin:  20px auto;padding-top:19.668%}
+    .detailed_info .edu_bg .title{line-height: 36px;font-size: 18px;height: 36px;width: 85%;}
+    .detailed_info .edu_bg .title i.title_edu{width: 25px;height: 25px;margin-right: 10px;}
+    .detailed_info .edu_bg .title i.title_honor{width: 25px;height: 25px;margin-right: 10px;}
+    .detailed_info .edu_bg .info{padding-left: 35px;font-size: 12px;margin: 10px auto;width: 85%;}
 }
