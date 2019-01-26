@@ -1,36 +1,41 @@
 .index{margin: 0 auto;bottom:0;top: 0;left: 0;right: 0;overflow-y: auto;position: fixed;max-width: 1200px;}
-.personal_info_seize{width: 300px;position: relative;margin:20px;}
-.personal_info{width: 300px;position: absolute;top:0;bottom: 0;min-height: 700px;}
-.personal_info .top{height: 180px;background-color: #4d4d4d;width: 100%;}
-.personal_info .head_portrait{width: 128px;height: 128px;border-radius: 50%;border:5px solid #fff;background:url(../images/head_portrait.jpg);background-size: 100%; margin: 0 auto;margin-top:-64px;}
-.personal_info .main_info{text-align: center;}
-.personal_info .main_info p.name{font-size: 24px;font-weight: bolder;}
-.personal_info .main_info p.occupation{font-size: 18px;font-weight: bolder;}
-.personal_info .main_info p.motto{font-size: 14px;}
-.personal_info ul li{margin-top:10px;}
-.personal_info ul li img{width: 48px;height: 48px;display: inline-block;vertical-align: middle;text-align: left;}
-.personal_info ul li span{display: inline-block;vertical-align: middle;width: 170px;text-align: center;}
-.personal_info .chat_icon{text-align: center;}
-.personal_info .chat_icon img {margin: 0px;width: 32px;height: 32px;margin: 10px;cursor: pointer;}
-.qq_qr_code,.wechat_qr_code{position: fixed;top: 50%;left: 50%;margin-left:-128px;margin-top:-128px;display: none;}
-.qq_qr_code img,.wechat_qr_code img{width: 256px;height: 256px;}
+.personal-info-seize{width: 300px;position: relative;margin:20px;}
+.personal-info{width: 300px;position: absolute;top:0;bottom: 0;min-height: 700px;}
+.personal-info .top{height: 180px;background-color: #4d4d4d;width: 100%;}
+.personal-info .head-portrait{width: 128px;height: 128px;border-radius: 50%;border:5px solid #fff;background:url(../images/head-portrait.jpg);background-size: 100%; margin: 0 auto;margin-top:-64px;}
+.personal-info .main-info{text-align: center;}
+.personal-info .main-info p.name{font-size: 24px;font-weight: bolder;}
+.personal-info .main-info p.occupation{font-size: 18px;font-weight: bolder;}
+.personal-info .main-info p.motto{font-size: 14px;}
+.personal-info ul li{margin-top:10px;}
+.personal-info ul li img{width: 48px;height: 48px;display: inline-block;vertical-align: middle;text-align: left;}
+.personal-info ul li span{display: inline-block;vertical-align: middle;width: 170px;text-align: center;}
+.personal-info .chat-icon{text-align: center;}
+.personal-info .chat-icon img {margin: 0px;width: 32px;height: 32px;margin: 10px;cursor: pointer;}
+.qq-qr-code,.wechat-qr-code{position: fixed;top: 50%;left: 50%;margin-left:-128px;margin-top:-128px;display: none;}
+.qq-qr-code img,.wechat-qr-code img{width: 256px;height: 256px;}
 
-.personal_profile{flex: 1;margin:20px 20px 20px 0;flex-direction: column;display: flex;min-height: 700px;}
-.personal_profile .menu{padding:0px;height: 40px;margin-bottom: 20px;}
-.personal_profile .menu ul li{display: inline-block;text-align: center;flex: 1;height: 40px;line-height: 40px;cursor: pointer;}
-.personal_profile .menu ul li.selection{border-top:2px solid #666;}
-.personal_profile .detailed_info{flex: 1;text-align: center;display: flex;flex-direction: column;}
-.personal_profile .detailed_info .edu_bg{flex: 1;overflow-y: auto;display: block;min-height: 600px;text-align: left;padding-bottom: 20px;}
-.personal_profile .detailed_info .personal_skills{flex: 1;overflow-y: auto;display: none;min-height: 600px;}
-.personal_profile .detailed_info .work_experience{flex: 1;overflow-y: auto;display: none;min-height: 600px;}
-.personal_profile .detailed_info .personal_works{flex: 1;overflow-y: auto;display: none;min-height: 600px;}
+.personal-profile{flex: 1;margin:20px 20px 20px 0;flex-direction: column;display: flex;min-height: 700px;}
+.personal-profile .menu{padding:0px;height: 40px;margin-bottom: 20px;}
+.personal-profile .menu ul li{display: inline-block;text-align: center;flex: 1;height: 40px;line-height: 40px;cursor: pointer;}
+.personal-profile .menu ul li.selection{border-top:2px solid #666;}
+.personal-profile .detailed-info{flex: 1;text-align: center;display: flex;flex-direction: column;}
+.personal-profile .detailed-info .edu-bg{flex: 1;overflow-y: auto;display: block;min-height: 600px;text-align: left;padding-bottom: 20px;}
+.personal-profile .detailed-info .personal-skills{flex: 1;overflow-y: auto;display: none;min-height: 600px;text-align: left;padding-bottom: 20px;padding-top:20px;}
+.personal-profile .detailed-info .work-experience{flex: 1;overflow-y: auto;display: none;min-height: 600px;text-align: left;padding-bottom: 20px;padding-top:20px;}
+.personal-profile .detailed-info .personal-works{flex: 1;overflow-y: auto;display: none;min-height: 600px;text-align: left;padding-bottom: 20px;padding-top:20px;}
 
-.detailed_info .edu_bg .school_img{background: url(../images/school_img.png) no-repeat;width: 60%;height: 0px;padding-top:14.751%;background-size: 100%;margin: 40px auto;max-width: 480px;}
-.detailed_info .edu_bg .title{width: 80%;margin: 0  auto;line-height: 50px;font-size: 20px;height: 50px;display: flex;align-items:center;font-weight: bolder;}
-.detailed_info .edu_bg .title i.title_edu {height: 40px;width: 40px;background: url(../images/edu_bg.png) rgba(0, 0,0, 0.1);background-size: 100%;border-radius: 25px;margin-right: 20px;}
-.detailed_info .edu_bg .title span{flex: 1;border-bottom: 1px solid #666;}
-.detailed_info .edu_bg .info {width: 80%; margin: 20px auto;padding-left: 70px;line-height: 30px;font-size: 16px;}
-.detailed_info .edu_bg .title i.title_honor {height: 40px;width: 40px;background: url(../images/honor.png) rgba(0, 0,0, 0.1);background-size: 100%;border-radius: 25px;margin-right: 20px;}
+.detailed-info .title{width: 80%;margin: 0  auto;line-height: 40px;font-size: 20px;height: 40px;display: flex;align-items:center;font-weight: bolder;}
+.detailed-info .title span{flex: 1;border-bottom: 1px solid #666;}
+.detailed-info .edu-bg .school-img{background: url(../images/school-img.png) no-repeat;width: 60%;height: 0px;padding-top:14.751%;background-size: 100%;margin: 40px auto;max-width: 480px;}
+.detailed-info .title i{height: 40px;width: 40px;border-radius: 25px;margin-right: 20px;}
+.detailed-info .title i.edu {background: url(../images/edu-bg.png) rgba(0,0,0, 0.1);background-size: 100%;}
+.detailed-info .title i.honor {background: url(../images/honor.png) rgba(0,0,0, 0.1);background-size: 100%;}
+.detailed-info .title i.skills{background: url(../images/skills.png) rgba(0,0,0, 0.1);background-size: 100%;}
+.detailed-info .title i.evaluate{background: url(../images/evaluate.png) rgba(0,0,0, 0.1);background-size: 100%;}
+.detailed-info .edu-bg .info {width: 80%; margin: 20px auto;padding-left: 60px;line-height: 30px;font-size: 16px;}
+.detailed-info .personal-skills .info {width: 80%; margin: 20px auto;padding-left: 60px;line-height: 30px;font-size: 16px;}
+
 
 /* 无滚动条 */
 ::-webkit-scrollbar {width: 0px;height: 0px;}
@@ -43,34 +48,34 @@
 ::-webkit-scrollbar-track,
 ::-webkit-scrollbar-thumb {border-right: 1px solid transparent;border-left: 1px solid transparent;}
 ::-webkit-scrollbar-track:hover {background-color: rgba(0,0,0,0.15);}
-::-webkit-scrollbar-button:start {width: 10px;height: 10px;background: url("../images/scrollbar_arrow.png") no-repeat 0 0;}
-::-webkit-scrollbar-button:start:hover {background: url("../images/scrollbar_arrow.png") no-repeat -15px 0;}
-::-webkit-scrollbar-button:start:active {background: url("../images/scrollbar_arrow.png") no-repeat -30px 0;
-}::-webkit-scrollbar-button:end {width: 10px;height: 10px;background: url("../images/scrollbar_arrow.png") no-repeat 0 -18px;}
-::-webkit-scrollbar-button:end:hover {background: url("../images/scrollbar_arrow.png") no-repeat -15px -18px;}
-::-webkit-scrollbar-button:end:active {background: url("../images/scrollbar_arrow.png") no-repeat -30px -18px;} */
+::-webkit-scrollbar-button:start {width: 10px;height: 10px;background: url("../images/scrollbar-arrow.png") no-repeat 0 0;}
+::-webkit-scrollbar-button:start:hover {background: url("../images/scrollbar-arrow.png") no-repeat -15px 0;}
+::-webkit-scrollbar-button:start:active {background: url("../images/scrollbar-arrow.png") no-repeat -30px 0;
+}::-webkit-scrollbar-button:end {width: 10px;height: 10px;background: url("../images/scrollbar-arrow.png") no-repeat 0 -18px;}
+::-webkit-scrollbar-button:end:hover {background: url("../images/scrollbar-arrow.png") no-repeat -15px -18px;}
+::-webkit-scrollbar-button:end:active {background: url("../images/scrollbar-arrow.png") no-repeat -30px -18px;} */
 /* 响应式布局 */
 @media screen and ( max-width: 800px ){
     .index{width: 100%;display: block;position: unset;}
-    .personal_info_seize{width: auto;position: unset;margin: 5px 5px;}
-    .personal_info{display: block;width: auto;min-height: 600px;width: 100%;position: unset;}
-    .personal_profile{margin:20px 5px 5px 5px;}
-    .personal_profile .menu{margin-bottom:10px;font-size: 14px;}
-    .personal_profile .menu_fixed{position: fixed;left: 5px;right: 5px;top:0px;}
-    .personal_info ul li{margin-top:0px;}
-    .personal_info .main_info p.name,
-    .personal_info .main_info p.motto,
-    .personal_info .main_info ul,
-    .personal_info .chat_icon{margin-top: 15px;}
-    .personal_info .top{height:150px}
-    .personal_profile .detailed_info .edu_bg{margin-top:10px;display: block;} 
-    .personal_profile .detailed_info .personal_skills{margin-top:10px;display: block;} 
-    .personal_profile .detailed_info .work_experience{margin-top:10px;display: block;} 
-    .personal_profile .detailed_info .personal_works{margin-top:10px;display: block;} 
+    .personal-info-seize{width: auto;position: unset;margin: 5px 5px;}
+    .personal-info{display: block;width: auto;min-height: 600px;width: 100%;position: unset;}
+    .personal-profile{margin:20px 5px 5px 5px;}
+    .personal-profile .menu{margin-bottom:10px;font-size: 14px;}
+    .personal-profile .menu-fixed{position: fixed;left: 5px;right: 5px;top:0px;}
+    .personal-info ul li{margin-top:0px;}
+    .personal-info .main-info p.name,
+    .personal-info .main-info p.motto,
+    .personal-info .main-info ul,
+    .personal-info .chat-icon{margin-top: 15px;}
+    .personal-info .top{height:150px}
+    .personal-profile .detailed-info .edu-bg{margin-top:10px;display: block;} 
+    .personal-profile .detailed-info .personal-skills{margin-top:10px;display: block;} 
+    .personal-profile .detailed-info .work-experience{margin-top:10px;display: block;} 
+    .personal-profile .detailed-info .personal-works{margin-top:10px;display: block;} 
 
-    .detailed_info .edu_bg .school_img{width: 80%;margin:  20px auto;padding-top:19.668%}
-    .detailed_info .edu_bg .title{line-height: 36px;font-size: 18px;height: 36px;width: 85%;}
-    .detailed_info .edu_bg .title i.title_edu{width: 25px;height: 25px;margin-right: 10px;}
-    .detailed_info .edu_bg .title i.title_honor{width: 25px;height: 25px;margin-right: 10px;}
-    .detailed_info .edu_bg .info{padding-left: 35px;font-size: 12px;margin: 10px auto;width: 85%;}
+    .detailed-info .edu-bg .school-img{width: 80%;margin:  20px auto;padding-top:19.668%}
+    .detailed-info .title{line-height: 36px;font-size: 18px;height: 36px;width: 85%;}
+    .detailed-info .title i.edu{width: 25px;height: 25px;margin-right: 10px;}
+    .detailed-info .title i.honor{width: 25px;height: 25px;margin-right: 10px;}
+    .detailed-info .edu-bg .info{padding-left: 35px;font-size: 12px;margin: 10px auto;width: 85%;}
 }

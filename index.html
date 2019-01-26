@@ -4,9 +4,8 @@
     <meta charset="utf-8">
     <title>个人主页</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
-    <link rel="shortcut icon" href="https://www.17qcc.com/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="layui/css/layui.css" />
-    <link rel="stylesheet" href="css/currency_style.css" />
+    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
     <script src="layui/layui.all.js"></script>
@@ -15,11 +14,11 @@
 <body>
     <div class="index flexbox">
         <!-- 左边个人信息 -->
-        <div class="personal_info_seize">
-            <div class="personal_info outer ">
+        <div class="personal-info-seize">
+            <div class="personal-info outer ">
                 <div class="top"></div>
-                <div class="head_portrait"></div>
-                <div class="main_info">
+                <div class="head-portrait"></div>
+                <div class="main-info">
                     <p class="name mt30">高位强</p>
                     <p class="occupation mt10">前端工程师</p>
                     <p class="motto mt30">星光不问赶路人，时光不负有心人</p>
@@ -29,16 +28,16 @@
                         <li><img src="images/mailbox.png" alt="邮箱" /><span>985313519@qq.com</span></li>
                     </ul>
                 </div>
-                <p class="chat_icon mt30">
+                <p class="chat-icon mt30">
                     <a href="https://github.com/weiqiang2019" target="_blank"><img src="images/github.png" alt="github"></a>
-                    <a href="javascript:;" id="qq_icon"><img src="images/qq.png" alt="qq" /></a>
-                    <a href="javascript:;" id="wechat_icon"><img src="images/wechat.png" alt="wechat" /></a>
+                    <a href="javascript:;" id="qq-icon"><img src="images/qq.png" alt="qq" /></a>
+                    <a href="javascript:;" id="wechat-icon"><img src="images/wechat.png" alt="wechat" /></a>
                     <a href="https://weibo.com/u/5832155572" target="_blank"><img src="images/sina.png" alt="sina"></a>
                 </p>
             </div>
         </div>
         <!-- 右边个人简介 -->
-        <div class="personal_profile">
+        <div class="personal-profile">
             <!-- 右边选项卡导航 -->
             <div class="menu outer">
                 <ul class="flexbox">
@@ -49,10 +48,11 @@
                 </ul>
             </div>
             <!-- 选项卡内容 -->
-            <div class="detailed_info">
-                <div class="edu_bg outer">
-                    <div class="school_img"></div>
-                    <div class="title"> <i class="title_edu"></i><span>●&nbsp;教育背景</span></div>
+            <div class="detailed-info">
+                <!-- 教育背景 -->
+                <div class="edu-bg outer">
+                    <div class="school-img"></div>
+                    <div class="title"><i class="edu"></i><span>●&nbsp;教育背景</span></div>
                     <div class="info">
                         <p>毕业院校：泉州信息工程学院</p>
                         <p>最高学历：本科</p>
@@ -60,7 +60,7 @@
                         <p>所学专业：软件工程（会计信息化）</p>
                         <p>主修课程：网页设计、C语言、C#语言、Java语言、数据库、会计相关知识</p>
                     </div>
-                    <div class="title"> <i class="title_honor"></i><span>●&nbsp;个人荣誉（部分）</span></div>
+                    <div class="title"><i class="honor"></i><span>●&nbsp;个人荣誉（部分）</span></div>
                     <div class="info">
                         <p>获得2017-2018学年国家励志奖学金</p>
                         <p>获得2017-2018学年泉州信息工程学院二等奖学金</p>
@@ -69,74 +69,89 @@
                         <p>获得2015-2016学年“优秀学生干部”称号</p>
                     </div>
                 </div>
-                <div class="personal_skills outer">个人技能待添加
+                <!-- 个人技能 -->
+                <div class="personal-skills outer">
+                    <div class="title"><i class="skills"></i><span>●&nbsp;个人技能</span></div>
+                    <div class="info">
+                        <div class="info-left">
+                            <p>HTML+CSS3：</p>
+                            <p>JavaScript+jQuery：</p>
+                            <p>JSON+Ajax：</p>
+                            <p>PhotoShop：</p>
+                            <p>ASP.NET：</p>
+                        </div>
+                    </div>
+                    <div class="title"><i class="evaluate"></i><span>●&nbsp;自我评价</span></div>
+                    <div class=""></div>
                 </div>
-                <div class="work_experience outer">工作经历待添加
+                <!-- 工作经历 -->
+                <div class="work-experience outer">工作经历待添加
                 </div>
-                <div class="personal_works outer">个人作品待添加
+                <!-- 个人作品 -->
+                <div class="personal-works outer">个人作品待添加
                 </div>
             </div>
         </div>
     </div>
     <!-- QQ微信二维码弹窗 -->
-    <div class="qq_qr_code"><img src="images/qq_qr_code.jpg" alt=""></div>
-    <div class="wechat_qr_code"><img src="images/wechat_qr_code.jpg" alt=""></div>
+    <div class="qq-qr-code"><img src="images/qq-qr-code.jpg" alt=""></div>
+    <div class="wechat-qr-code"><img src="images/wechat-qr-code.jpg" alt=""></div>
     <script>
         // QQ微信二维码弹窗
-        $("#qq_icon").on("click", function () {
+        $("#qq-icon").on("click", function () {
             layer.open({
                 type: 1,
                 title: false,
                 closeBtn: 0,
                 shadeClose: true,
                 skin: 'yourclass',
-                content: $(".qq_qr_code"),
+                content: $(".qq-qr-code"),
                 end: function () {
-                    $(".qq_qr_code").hide();
+                    $(".qq-qr-code").hide();
                 },
             });
         });
-        $("#wechat_icon").on("click", function () {
+        $("#wechat-icon").on("click", function () {
             layer.open({
                 type: 1,
                 title: false,
                 closeBtn: 0,
                 shadeClose: true,
                 skin: 'yourclass',
-                content: $(".wechat_qr_code"),
+                content: $(".wechat-qr-code"),
                 end: function () {
-                    $(".wechat_qr_code").hide();
+                    $(".wechat-qr-code").hide();
                 },
             });
         });
         //浏览器窗口变化时，重新设置ulSlide
         $(window).resize(function () {
             if ($(window).scrollTop() < 625) {
-                ulSlide = $(".personal_profile .menu").offset().top;
+                ulSlide = $(".personal-profile .menu").offset().top;
             }
         });
         //根据屏幕分辨率判断是否为移动端
         function isMobile() {
-            var screen_width = $(window).width();
-            if (screen_width <= 800) {
-                mobile_flag = true;
+            var screenWidth = $(window).width();
+            if (screenWidth <= 800) {
+                mobileFlag = true;
             } else {
-                mobile_flag = false;
+                mobileFlag = false;
             }
-            return mobile_flag;
+            return mobileFlag;
         }
         //教育背景-个人技能-工作经历-个人作品 选项卡点击切换和跳转
-        var li = $(".personal_profile .menu ul li");
+        var li = $(".personal-profile .menu ul li");
         li.on("click", function () {
             if ($(window).width() > 800) {
                 var index = $(this).index();
                 $(this).siblings("li").removeClass("selection");
                 $(this).addClass("selection");
-                $(".detailed_info").children().hide();
-                $(".detailed_info").children().eq(index).show();
+                $(".detailed-info").children().hide();
+                $(".detailed-info").children().eq(index).show();
             } else {
                 var index = $(this).index();
-                var y = $(".detailed_info").children().eq(index).offset().top;
+                var y = $(".detailed-info").children().eq(index).offset().top;
                 $("html,body").animate({
                     scrollTop: y - 50
                 }, 300);
@@ -144,17 +159,17 @@
             }
         });
         //移动端下滑一定距离后，让选项卡显示在顶端，并根据index值改变选项卡样式
-        var ulSlide = $(".personal_profile .menu").offset().top;
+        var ulSlide = $(".personal-profile .menu").offset().top;
         $(window).scroll(function () {
             var slide = $(window).scrollTop();
             // console.log(slide);
             // console.log(ulSlide);
             if (slide >= ulSlide) {
-                $(".personal_profile .menu").addClass("menu_fixed");
-                $(".detailed_info").css("margin-top", "50px");
+                $(".personal-profile .menu").addClass("menu-fixed");
+                $(".detailed-info").css("margin-top", "50px");
             } else {
-                $(".personal_profile .menu").removeClass("menu_fixed");
-                $(".detailed_info").css("margin-top", "0px");
+                $(".personal-profile .menu").removeClass("menu-fixed");
+                $(".detailed-info").css("margin-top", "0px");
             }
             var scro = $(window).scrollTop();
             var index = rightNavLiChange(scro);
@@ -164,10 +179,10 @@
         //根据滑动距离，返回选项卡的index值
         function rightNavLiChange(scro) {
             var index;
-            var jybj = $(".detailed_info .edu_bg").offset().top;
-            var grjn = $(".detailed_info .personal_skills").offset().top;
-            var gzjl = $(".detailed_info .work_experience").offset().top;
-            var grzp = $(".detailed_info .personal_works").offset().top;
+            var jybj = $(".detailed-info .edu-bg").offset().top;
+            var grjn = $(".detailed-info .personal-skills").offset().top;
+            var gzjl = $(".detailed-info .work-experience").offset().top;
+            var grzp = $(".detailed-info .personal-works").offset().top;
             if (scro < jybj - $(window).height() / 2 + ulSlide) {
                 index = 0;
             } else if (scro < grjn - $(window).height() / 2 + ulSlide) {
