@@ -18,7 +18,7 @@
 
 /* 教育背景 */
 .personal-profile{flex: 1;margin:20px 20px 20px 0;flex-direction: column;display: flex;min-height: 700px;}
-.personal-profile .menu{padding:0px;height: 40px;margin-bottom: 20px;z-index: 1;}
+.personal-profile .menu{padding:0px;height: 40px;margin-bottom: 20px;z-index: 11;}
 .personal-profile .menu ul li{display: inline-block;text-align: center;flex: 1;height: 40px;line-height: 40px;cursor: pointer;}
 .personal-profile .menu ul li.selection{border-top:2px solid #666;}
 .personal-profile .detailed-info{flex: 1;text-align: center;display: flex;flex-direction: column;}
