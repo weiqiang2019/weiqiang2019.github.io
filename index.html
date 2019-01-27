@@ -72,23 +72,86 @@
                 <!-- 个人技能 -->
                 <div class="personal-skills outer">
                     <div class="title"><i class="skills"></i><span>●&nbsp;个人技能</span></div>
-                    <div class="info">
-                        <div class="info-left">
+                    <div class="info flexbox">
+                        <div class="left">
                             <p>HTML+CSS3：</p>
                             <p>JavaScript+jQuery：</p>
                             <p>JSON+Ajax：</p>
                             <p>PhotoShop：</p>
                             <p>ASP.NET：</p>
                         </div>
+                        <div class="right">
+                            <div class="progress"><span><i w="90%"></i></span></div>
+                            <div class="progress"><span><i w="81%"></i></span></div>
+                            <div class="progress"><span><i w="70%"></i></span></div>
+                            <div class="progress"><span><i w="75%"></i></span></div>
+                            <div class="progress"><span><i w="60%"></i></span></div>
+                        </div>
                     </div>
                     <div class="title"><i class="evaluate"></i><span>●&nbsp;自我评价</span></div>
-                    <div class=""></div>
+                    <div class="info">
+                        <p>对计算机软件开发有浓厚的兴趣</p>
+                        <p>具备良好的学习能力，对新事物接受能力强</p>
+                        <p>具备钻研精神和创新能力，思维灵活</p>
+                        <p>工作认真负责，责任心强</p>
+                        <p>善于沟通，具备良好的团队合作能力和人际交往能力</p>
+                    </div>
                 </div>
                 <!-- 工作经历 -->
-                <div class="work-experience outer">工作经历待添加
+                <div class="work-experience outer">
+                    <div class="title"><i class="experience"></i><span>●&nbsp;工作经历</span></div>
+                    <div class="info">
+                        <ul class="layui-timeline">
+                            <li class="layui-timeline-item">
+                                <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                                <div class="layui-timeline-content layui-text">
+                                    <h3 class="layui-timeline-title">至今</h3>
+                                    <h3>石狮青创城前端程序员</h3>
+                                    <br>
+                                    <p>将设计师提供的PSD图片输出为HTML网页</p>
+                                    <p>配合后端处理公司网站数据交互</p>
+                                    <p>公司网站日常维护</p>
+                                    <br>
+                                </div>
+                            </li>
+                            <li class="layui-timeline-item">
+                                <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                                <div class="layui-timeline-content layui-text">
+                                    <h3 class="layui-timeline-title">2018.11</h3>
+                                    <h3>中国电信学子公司楼长</h3>
+                                    <br>
+                                    <p>负责泉州信息工程学院4号公寓网络及光猫故障修复</p>
+                                    <p>负责办理电信相关业务</p>
+                                    <br>
+
+                                </div>
+                            </li>
+                            <li class="layui-timeline-item">
+                                <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                                <div class="layui-timeline-content layui-text">
+                                    <h3 class="layui-timeline-title">2017.6</h3>
+                                    <h3>泉州信息工程学院自律会办公室主任</h3>
+                                    <br>
+                                    <p>协调、组织自律会各部门间的工作</p>
+                                    <p>策划举办“校园宿舍文化节”、“文明宿舍评选”、“水果拼盘大赛”等活动</p>
+                                    <br>
+                                </div>
+                            </li>
+                            <li class="layui-timeline-item">
+                                <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                                <div class="layui-timeline-content layui-text">
+                                    <h3 class="layui-timeline-title">2016.9</h3>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </div>
                 </div>
                 <!-- 个人作品 -->
                 <div class="personal-works outer">个人作品待添加
+                </div>
+                <div class="baseline mt10">
+                    <i></i><span>我也是有底线的</span>
                 </div>
             </div>
         </div>
@@ -97,6 +160,12 @@
     <div class="qq-qr-code"><img src="images/qq-qr-code.jpg" alt=""></div>
     <div class="wechat-qr-code"><img src="images/wechat-qr-code.jpg" alt=""></div>
     <script>
+        //页面加载时执行
+        $(document).ready(function () {
+            if ($(window).width() <= 800) progress();
+
+
+        });
         // QQ微信二维码弹窗
         $("#qq-icon").on("click", function () {
             layer.open({
@@ -149,6 +218,12 @@
                 $(this).addClass("selection");
                 $(".detailed-info").children().hide();
                 $(".detailed-info").children().eq(index).show();
+                //点击个人技能时加载进度条
+                if (index != 1) {
+                    $(".detailed-info .personal-skills .info .right i").css("width", "0");
+                } else {
+                    progress();
+                }
             } else {
                 var index = $(this).index();
                 var y = $(".detailed-info").children().eq(index).offset().top;
@@ -193,6 +268,26 @@
                 index = 3;
             }
             return index;
+        };
+        //进度条
+        function progress() {
+            $(".detailed-info .personal-skills .info .right .progress").each(function () {
+                var w = parseInt($(this).find("i").attr("w"));
+                //根据进度条百分比改变颜色
+                if (w > 80) {
+                    $(this).find("i").css("background-color", "#adf71e");
+                    $(this).find("i").text("熟练");
+                } else if (w > 60) {
+                    $(this).find("i").css("background-color", "#f7c21d");
+                    $(this).find("i").text("熟悉");
+                } else {
+                    $(this).find("i").css("background-color", "#f7941d");
+                    $(this).find("i").text("有所接触");
+                }
+                $(this).find("i").animate({
+                    width: w + "%"
+                });
+            });
         };
     </script>
 </body>

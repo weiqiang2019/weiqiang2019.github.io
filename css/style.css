@@ -1,3 +1,4 @@
+/* 左边个人信息 */
 .index{margin: 0 auto;bottom:0;top: 0;left: 0;right: 0;overflow-y: auto;position: fixed;max-width: 1200px;}
 .personal-info-seize{width: 300px;position: relative;margin:20px;}
 .personal-info{width: 300px;position: absolute;top:0;bottom: 0;min-height: 700px;}
@@ -15,16 +16,20 @@
 .qq-qr-code,.wechat-qr-code{position: fixed;top: 50%;left: 50%;margin-left:-128px;margin-top:-128px;display: none;}
 .qq-qr-code img,.wechat-qr-code img{width: 256px;height: 256px;}
 
+/* 教育背景 */
 .personal-profile{flex: 1;margin:20px 20px 20px 0;flex-direction: column;display: flex;min-height: 700px;}
-.personal-profile .menu{padding:0px;height: 40px;margin-bottom: 20px;}
+.personal-profile .menu{padding:0px;height: 40px;margin-bottom: 20px;z-index: 1;}
 .personal-profile .menu ul li{display: inline-block;text-align: center;flex: 1;height: 40px;line-height: 40px;cursor: pointer;}
 .personal-profile .menu ul li.selection{border-top:2px solid #666;}
 .personal-profile .detailed-info{flex: 1;text-align: center;display: flex;flex-direction: column;}
 .personal-profile .detailed-info .edu-bg{flex: 1;overflow-y: auto;display: block;min-height: 600px;text-align: left;padding-bottom: 20px;}
-.personal-profile .detailed-info .personal-skills{flex: 1;overflow-y: auto;display: none;min-height: 600px;text-align: left;padding-bottom: 20px;padding-top:20px;}
-.personal-profile .detailed-info .work-experience{flex: 1;overflow-y: auto;display: none;min-height: 600px;text-align: left;padding-bottom: 20px;padding-top:20px;}
-.personal-profile .detailed-info .personal-works{flex: 1;overflow-y: auto;display: none;min-height: 600px;text-align: left;padding-bottom: 20px;padding-top:20px;}
-
+.personal-profile .detailed-info .personal-skills{flex: 1;overflow-y: auto;display: none;min-height: 600px;text-align: left;padding-bottom: 60px;padding-top:60px;}
+.personal-profile .detailed-info .work-experience{flex: 1;overflow-y: auto;display: none;min-height: 600px;padding-bottom: 20px;padding-top:60px;text-align: left;}
+.personal-profile .detailed-info .personal-works{flex: 1;overflow-y: auto;display: none;min-height: 600px;padding-bottom: 20px;padding-top:20px;}
+.personal-profile .detailed-info .baseline{display: none;position: relative;height: 25px;}
+.personal-profile .detailed-info .baseline i{width: 100%;border: 1px dashed #bbb;position: absolute;top: 12px;left: 0;}
+.personal-profile .detailed-info .baseline span{height: 25px;background-image: url(../images/body-bg.jpg);line-height: 25px;position: absolute;font-size: 12px;top: 0px;left: 50%;margin-left:-50px;width: 100px;color: #333;}
+/* 个人技能 */
 .detailed-info .title{width: 80%;margin: 0  auto;line-height: 40px;font-size: 20px;height: 40px;display: flex;align-items:center;font-weight: bolder;}
 .detailed-info .title span{flex: 1;border-bottom: 1px solid #666;}
 .detailed-info .edu-bg .school-img{background: url(../images/school-img.png) no-repeat;width: 60%;height: 0px;padding-top:14.751%;background-size: 100%;margin: 40px auto;max-width: 480px;}
@@ -33,9 +38,18 @@
 .detailed-info .title i.honor {background: url(../images/honor.png) rgba(0,0,0, 0.1);background-size: 100%;}
 .detailed-info .title i.skills{background: url(../images/skills.png) rgba(0,0,0, 0.1);background-size: 100%;}
 .detailed-info .title i.evaluate{background: url(../images/evaluate.png) rgba(0,0,0, 0.1);background-size: 100%;}
+.detailed-info .title i.experience{background: url(../images/experience.png) rgba(0,0,0, 0.1);background-size: 100%;}
 .detailed-info .edu-bg .info {width: 80%; margin: 20px auto;padding-left: 60px;line-height: 30px;font-size: 16px;}
-.detailed-info .personal-skills .info {width: 80%; margin: 20px auto;padding-left: 60px;line-height: 30px;font-size: 16px;}
+.detailed-info .personal-skills .info {width: 80%; margin: 40px auto;padding-left: 60px;line-height: 30px;font-size: 16px;}
+.detailed-info .personal-skills .info .left{width: auto;}
+.detailed-info .personal-skills .info .right{flex: 1;}
+.detailed-info .personal-skills .info .right .progress{height: 30px;padding: 6px 0;}
+.detailed-info .personal-skills .info .right span{line-height: 18px;height: 18px;position: relative;border-radius: 20px;background-color: #e2e2e2;display: block;}
+.detailed-info .personal-skills .info .right i{position: absolute;left: 0;top: 0;width: 0;max-width: 100%;height: 18px;border-radius: 20px;text-align: right;background-color:#adf71e;transition: all .3s;-webkit-transition: all .3s;display: block;font-size: 12px;font-style: normal;padding-right: 5px;}
 
+/* 工作经历 */
+.detailed-info .work-experience .info{width: 80%; margin: 40px auto;padding-left: 60px;line-height: 30px;font-size: 16px;}
+/* 个人作品 */
 
 /* 无滚动条 */
 ::-webkit-scrollbar {width: 0px;height: 0px;}
@@ -54,6 +68,7 @@
 }::-webkit-scrollbar-button:end {width: 10px;height: 10px;background: url("../images/scrollbar-arrow.png") no-repeat 0 -18px;}
 ::-webkit-scrollbar-button:end:hover {background: url("../images/scrollbar-arrow.png") no-repeat -15px -18px;}
 ::-webkit-scrollbar-button:end:active {background: url("../images/scrollbar-arrow.png") no-repeat -30px -18px;} */
+
 /* 响应式布局 */
 @media screen and ( max-width: 800px ){
     .index{width: 100%;display: block;position: unset;}
@@ -68,14 +83,25 @@
     .personal-info .main-info ul,
     .personal-info .chat-icon{margin-top: 15px;}
     .personal-info .top{height:150px}
-    .personal-profile .detailed-info .edu-bg{margin-top:10px;display: block;} 
-    .personal-profile .detailed-info .personal-skills{margin-top:10px;display: block;} 
-    .personal-profile .detailed-info .work-experience{margin-top:10px;display: block;} 
-    .personal-profile .detailed-info .personal-works{margin-top:10px;display: block;} 
+    .personal-profile .detailed-info .edu-bg{margin-top:10px;display: block;min-height: 400px;} 
+    .personal-profile .detailed-info .personal-skills{margin-top:10px;display: block;padding-bottom: 20px;padding-top: 40px;min-height: 400px;} 
+    .personal-profile .detailed-info .work-experience{margin-top:10px;display: block;padding-top: 40px;min-height: 400px;}
+    .personal-profile .detailed-info .personal-works{margin-top:10px;display: block;min-height: 400px;}
+    .personal-profile .detailed-info .baseline{display: block;}
 
     .detailed-info .edu-bg .school-img{width: 80%;margin:  20px auto;padding-top:19.668%}
     .detailed-info .title{line-height: 36px;font-size: 18px;height: 36px;width: 85%;}
-    .detailed-info .title i.edu{width: 25px;height: 25px;margin-right: 10px;}
-    .detailed-info .title i.honor{width: 25px;height: 25px;margin-right: 10px;}
-    .detailed-info .edu-bg .info{padding-left: 35px;font-size: 12px;margin: 10px auto;width: 85%;}
+    .detailed-info .title i.edu{width: 30px;height: 30px;margin-right: 10px;}
+    .detailed-info .title i.honor{width: 30px;height: 30px;margin-right: 10px;}
+    .detailed-info .title i.skills{width: 30px;height: 30px;margin-right: 10px;}
+    .detailed-info .title i.evaluate{width: 30px;height: 30px;margin-right: 10px;}
+    .detailed-info .title i.experience{width: 30px;height: 30px;margin-right: 10px;}
+    .detailed-info .edu-bg .info{padding-left: 40px;font-size: 12px;margin: 10px auto;width: 85%;}
+    .detailed-info .personal-skills .info{padding-left: 40px;font-size: 12px;margin: 20px auto;width: 85%;}
+    .detailed-info .work-experience .info{padding-left: 20px;font-size: 12px;margin: 20px auto;width: 85%;}
+}
+@media screen and ( max-width: 400px ){
+    .detailed-info .edu-bg .info{padding-left: 20px;}
+    .detailed-info .personal-skills .info{padding-left: 20px;}
+    .detailed-info .work-experience .info{padding-left: 0px;}
 }
