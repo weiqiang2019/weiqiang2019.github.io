@@ -28,7 +28,7 @@
 .personal-profile .detailed-info .personal-works{flex: 1;overflow-y: auto;display: none;min-height: 600px;padding-bottom: 20px;padding-top:20px;}
 .personal-profile .detailed-info .baseline{display: none;position: relative;height: 25px;}
 .personal-profile .detailed-info .baseline i{width: 100%;border: 1px dashed #bbb;position: absolute;top: 12px;left: 0;}
-.personal-profile .detailed-info .baseline span{height: 25px;background-image: url(../images/body-bg.jpg);line-height: 25px;position: absolute;font-size: 12px;top: 0px;left: 50%;margin-left:-50px;width: 100px;color: #333;}
+.personal-profile .detailed-info .baseline span{height: 25px;background-image: url(../images/body-bg.jpg);line-height: 25px;position: absolute;font-size: 12px;top: 0px;left: 50%;margin-left:-50px;width: 100px;color:#666;}
 /* 个人技能 */
 .detailed-info .title{width: 80%;margin: 0  auto;line-height: 40px;font-size: 20px;height: 40px;display: flex;align-items:center;font-weight: bolder;}
 .detailed-info .title span{flex: 1;border-bottom: 1px solid #666;}
